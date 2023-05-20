@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask application run with Gunicorn
+After=network.target
+
+[Service]
+User=nginx
+Group=nginx
+Environment="PATH=/srv/www/html/app/bin"
+WorkingDirectory=/srv/www/html/app
+ExecStart=/srv/www/html/app/bin/gunicorn --workers 3 --bind 0.0.0.0:5000 main:app
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,126 @@
+body, html {
+    scroll-padding-top: 25px;
+    background-color: #EFEFEF;
+    min-height: 100vh;
+}
+.settings {
+    display: none;
+}
+.database-list {
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+}
+#user-list {
+    width: 200px;
+}
+.card {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+}
+.card_content {
+    padding: 20px;
+    text-align: left;
+}
+#last-card {
+    padding-bottom: 100px;
+}
+.heading1 {
+    padding-bottom: 20px;
+}
+.wrapper {
+    padding: 25px;
+    padding-left: 25px;
+}
+.sidebar {
+    background-color: #383a3a;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.sidebar-menu {
+    color: #efefef;
+    text-decoration: none;
+}
+.settings-menu {
+    list-style-type: none;
+    margin: 20px;
+}
+.sidebar-menu:hover {
+    color: #626466;
+}
+.sidebar li{
+    list-style-type: none;
+    font-size: 10px;
+    position: relative;
+}
+.sidebar a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.fa-solid {
+    font-size: 40px;
+}
+.fa-house {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.user {
+    font-size: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    position: fixed;
+    color: white;
+    text-align: center;
+}
+.logout {
+    text-decoration: none;
+    list-style-type: none;
+    position: fixed;
+}
+.time {
+    font-size: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    bottom: 10px;
+    position: fixed;
+    padding-left: 17px;
+}
+#btn-add-usr > .fa-solid {
+    font-size: 15px;
+}
+.database-image {
+    width: 200px;
+}
+.flash-message-error {
+    color: #d9534f;
+}
+
+
+body.dark-mode{
+    background-color: #383a3a;
+    color: white;
+}
+.dark-mode .card {
+    background-color: #515252;
+}
+.dark-mode .sidebar {
+    background-color: #515252;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    overflow: hidden;
+}
+.dark-mode .sidebar-menu {
+    color: #2a2a2a;
+    text-decoration: none;
+}
+.dark-mode .sidebar-menu:hover {
+    color: #a2a2a2;
+}
+.dark-mode .database-list {
+    color: black;
+}

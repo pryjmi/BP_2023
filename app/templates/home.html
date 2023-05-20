@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block wrapper %}
+            <h1 class="heading1" id="home">Home</h1>
+            <div class="grid-home text-center">
+                <div class="row gy-4">
+                    <div class="col">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3 class="heading3">Latest known face detected</h3>
+                                <img src="{{known_face}}" class="database-image" alt="known"/>
+                                <p>
+                                    {{known_name}}
+                                    <br>
+                                    {{known_date}}
+                                </p>
+                                <form method="POST">
+                                    <input class="btn btn-success" type="submit" name="btn-dw-known" id="btn-dw-known" value='Download'>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3 class="heading3">Latest unknown face detected</h3>
+                                <img src="{{unknown_face}}" class="database-image" alt="unknown"/>
+                                <p>
+                                    {{unknown_name}}
+                                    <br>
+                                    {{unknown_date}}
+                                </p>
+                                <form method="POST">
+                                    <input class="btn btn-success" type="submit" name="btn-dw-unknown" id="btn-dw-unknown" value='Download'>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" id="last-card">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3 class="heading3">Latest no face detected</h3>
+                                <img src="{{no_face}}" class="database-image" alt="no_face"/>
+                                <p>
+                                    {{no_name}}
+                                    <br>
+                                    {{no_date}}
+                                </p>
+                                <form method="POST">
+                                    <input class="btn btn-success" type="submit" name="btn-dw-no" id="btn-dw-no" value='Download'>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col" id="last-card">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3>Upload images</h3>
+                                <div class="database-list">
+                                    Maximum upload at once size: <strong>64MB</strong>
+                                    <hr class="my-1 mx-auto">
+                                    Face has to be on the picture clearly visible to have an effect.
+                                    <hr class="my-1 mx-auto">
+                                    Upload could take a while when uploading more files, be patient and stay on this page.
+                                    <hr class="my-1 mx-auto">
+                                    Images have to be named properly in order to be added
+                                </div>
+                                <br>
+                                <form method="POST" action="/upload" enctype="multipart/form-data">
+                                    <div class="input-group mb-3">
+                                        <input type="file" name="image" multiple="" class="form-control">
+                                        <input class="btn btn-primary" type="submit" value="Upload">
+                                    </div>
+                                </form>
+                                <div class="database-list">
+                                    Example: john_1.jpg or john-doe_0.png
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" id="last-card">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3>List of images</h3>
+                                <div>
+                                    <form method="POST">
+                                        <div class="btn-group" role="group">
+                                            {% for x in file_list %}
+                                            <input class="btn btn-success" type="submit" name="file-btn-dw" id="file-btn-dw-{{x}}" value='{{x}}'>
+                                            <button type="submit" class="btn btn-danger" name="file-btn-del" id="file-btn-del-{{x}}" value="{{x}}">Del</button>
+                                            {% endfor %}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

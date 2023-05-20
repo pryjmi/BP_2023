@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block title %}Logs{% endblock %}
+{% block wrapper %}
+            <h1 class="heading1" id="home">Logs</h1>
+            <div class="grid-home text-center">
+                <div class="row gy-4">
+                    <div class="col">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3>Detection logs</h3>
+                                <form method="POST">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" name="log-number-input-det" id="log-number-input-det" placeholder="Number of logs">
+                                        <input class="btn btn-primary" type="submit" name="btn-show-logs-det" id="btn-show-logs-det" value="Show logs">
+                                      </div>
+                                </form>
+                                <br>
+                                <div class="database-list" id="user_logs">
+                                    {% for x in detection_logs %}
+                                    {{x}}<br>
+                                    {% endfor %}
+                                </div>
+                                <!--
+                                <br>
+                                <form method="POST" target="_blank" >
+                                    <input class="btn btn-primary btn-md" id="btn-log-all-det" name="btn-log-all-det" type="submit" value="Show all logs">
+                                </form>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3>User logs</h3>
+                                <form method="POST">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" name="log-number-input" id="log-number-input" placeholder="Number of logs">
+                                        <input class="btn btn-primary" type="submit" name="btn-show-logs" id="btn-show-logs" value="Show logs">
+                                      </div>
+                                </form>
+                                <br>
+                                <div class="database-list" id="user_logs">
+                                    {% for x in user_logs %}
+                                    {{x}}<br>
+                                    {% endfor %}
+                                </div>
+                                <br>
+                                <form method="POST" target="_blank" >
+                                    <input class="btn btn-primary btn-md" id="btn-log-all" name="btn-log-all" type="submit" value="Show all logs">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col" id="last-card">
+                        <div class="card p-3 mb-3">
+                            <div class="card_content">
+                                <h3>Database logs</h3>
+                                <form method="POST">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" name="log-number-input-db" id="log-number-input-db" placeholder="Number of logs">
+                                        <input class="btn btn-primary" type="submit" name="btn-show-logs-db" id="btn-show-logs-db" value="Show logs">
+                                      </div>
+                                </form>
+                                <br>
+                                <div class="database-list" id="db_logs">
+                                    {% for x in db_logs %}
+                                    {{x}}<br>
+                                    {% endfor %}
+                                </div>
+                                <br>
+                                <form method="POST" target="_blank" >
+                                    <input class="btn btn-primary btn-md" id="btn-log-all-db" name="btn-log-all-db" type="submit" value="Show all logs">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
