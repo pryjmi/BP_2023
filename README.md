@@ -1,5 +1,5 @@
 # Kamerový bezpečnostní systém s rozpoznáváním obrazu
-_Full documentation and english version in soon_
+_Full documentation and english version soon_
 
 - __Technology used__
   - Python (Flask) for backend
