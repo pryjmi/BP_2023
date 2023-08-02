@@ -1,5 +1,13 @@
 # Kamerový bezpečnostní systém s rozpoznáváním obrazu
 _Full documentation and english version in soon_
+
+- __Technology used__
+  - Python (Flask) for backend
+  - HTML with Jinja2 template
+  - CSS3 (Bootstrap)
+  - JavaScript (dark mode, settings window)
+  - MongoDB with GridFS
+  - nginx webserver on CentOS 8
 ## Obsah
 - __Raspberry Pi__
   - [Spuštění "aplikace" (main skript)](piApp/main.py)
