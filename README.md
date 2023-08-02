@@ -1,5 +1,5 @@
 # Kamerový bezpečnostní systém s rozpoznáváním obrazu
-__Jaroslav Pryjmak__
+_Full documentation and english version in soon_
 ## Obsah
 - __Raspberry Pi__
   - [Spuštění "aplikace" (main skript)](piApp/main.py)
