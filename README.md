@@ -1,6 +1,6 @@
+### English version below
 # Kamerový bezpečnostní systém s rozpoznáváním obrazu
 
-## Úvod
 V dnešní době je stále rostoucí poptávka po vysoce kvalitních zabezpečovacích systémech. Tato bakalářská práce je zaměřena na vývoj moderního kamerového zabezpečovacího systému, který nejen monitoruje pohyb, ale také rozpoznává obličeje jednotlivých osob. Jedná se o systém, který spojuje backend v Pythonu s intuitivní webovou aplikací a hardwarem založeným na Raspberry Pi.
 
 ## Použité technologie
@@ -60,7 +60,6 @@ __Ukázka aplikace__
 
 # Camera Security System with Image Recognition
 
-## Introduction
 Nowdays, there is a growing demand for high-quality security systems. This bachelor's thesis focuses on the development of a modern camera security system that not only monitors movement but also recognizes the faces of individual persons. It's a system that integrates a Python backend with an intuitive web application and hardware based on Raspberry Pi.
 
 ## Technologies Used
